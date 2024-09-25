@@ -1,4 +1,4 @@
-(defproject com.taoensso/carmine "3.4.1-compatibility-SNAPSHOT"
+(defproject com.adam-jijo-swym/swym-carmine "3.4.1-compatibility-SNAPSHOT"
   :author "Peter Taoussanis <https://www.taoensso.com>"
   :description "Redis client + message queue for Clojure"
   :url "https://github.com/taoensso/carmine"
