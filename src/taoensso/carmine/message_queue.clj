@@ -391,7 +391,7 @@
          :qk-nattempts     (qkey qname :nattempts)
          :qk-done          (qkey qname :done)
          :qk-requeue       (qkey qname :requeue)
-         :qk-mids-ready    (qkey qname :mids-ready)
+         :qk-mids-ready    (qkey qname :mid-circle)
          :qk-mid-circle    (qkey qname :mid-circle)
          :qk-isleep-a      (qkey qname :isleep-a)
          :qk-isleep-b      (qkey qname :isleep-b)}
