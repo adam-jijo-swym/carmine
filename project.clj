@@ -56,11 +56,19 @@
     {:language #{:clojure #_:clojurescript}
      :base-language :clojure}}}
 
+  :deploy-repositories [["snapshots"
+                         {:sign-releases false
+                          :url           "https://repo.swymrelay.com/repository/snapshots/"
+                          :username      :env
+                          :password      :env}]
+                        ["releases"
+                         {:sign-releases false
+                          :url           "https://repo.swymrelay.com/repository/releases/"
+                          :username      :env
+                          :password      :env}]]
+  :jar-exclusions [#"(\.(java|md)$|project.clj)"]
   :aliases
-  {"start-dev"     ["with-profile" "+dev" "repl" ":headless"]
-   ;; "build-once" ["do" ["clean"] ["cljsbuild" "once"]]
-   "deploy-lib"    ["do" #_["build-once"] ["deploy" "clojars"] ["install"]]
-
+  {"package" ["do" "clean," "jar," "test," "install"]
    "test-clj"     ["with-profile" "+c1.12:+c1.11:+c1.10:+c1.9" "test"]
    ;; "test-cljs" ["with-profile" "+c1.12" "cljsbuild"         "test"]
    "test-all"     ["do" ["clean"] ["test-clj"] #_["test-cljs"]]})
